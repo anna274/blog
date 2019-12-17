@@ -24,7 +24,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -35,7 +35,25 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validate the data
+        $this->validate($request, array( // array - validation rules
+            'title' => 'required|max:255', // введено и до максимальной длины
+            'category' => 'required|max:255',
+            'body' => 'required'
+        ));
+
+        //sore in the database
+
+        $post = new Post;
+
+        $post->title = $request->title;
+        $post->category = $request->category;
+        $post->body = $request->body;
+
+        $post->save();
+
+        //redirect to another page
+        return redirect()->route('posts.show', $post->id);
     }
 
     /**

@@ -391,3 +391,27 @@
         font-size: 40px;
         letter-spacing: .03em; 
     }  
+
+    /*create form*/
+    .form-create{
+        margin: 50px 300px 50px 350px;
+        width: 45%;
+        min-width: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-control-text{
+        width: 100%;
+        margin-bottom: 10px;
+        margin-left: 0px;
+    }
+    .form-control-button{
+        width: 150px;
+        height: 40px;
+        background-color: green;
+        color: white;
+    }
+    .form-control-button:hover{
+        background-color: DarkGreen;
+    }
