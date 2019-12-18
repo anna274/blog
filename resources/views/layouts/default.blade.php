@@ -2,8 +2,8 @@
 <html>
     <head>
         <title>HOW TO LIVE @yield('title')</title>
-        <link rel="shortcut icon" type="image/x-icon" href="{{url('assets/img/palm.png')}}"> 
-        <link rel="stylesheet" href="{{url('css/style.css')}}" media="all">
+        <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/palm.png')}}"> 
+        <link rel="stylesheet" href="{{asset('css/style.css')}}" media="all">
     </head>
     <body> <!-- background="{{url('assets/img/photo.jpg')}}"-->
         <font face = "Helvetica">
