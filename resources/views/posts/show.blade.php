@@ -6,7 +6,7 @@
 <div class="article-post">
     <div class="intro">
         <div class="cover">
-            <img src="{{url('assets/img/post_img.jpg')}}" alt="Post cover"> <!-- {{url('assets/img/post_img.jpg')}}-->
+            <img src="{{$post->image}}" alt="Post cover"> <!-- {{url('assets/img/post_img.jpg')}}-->
         </div>
         <div class="meta">
             <div class="category">
