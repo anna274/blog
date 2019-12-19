@@ -35,19 +35,13 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        // validate the data
-        $this->validate($request, array( // array - validation rules
-            'title' => 'required|max:255', // введено и до максимальной длины
-            'category' => 'required|max:255',
-            'body' => 'required'
-        ));
 
         //sore in the database
 
         $post = new Post;
 
         $post->title = $request->title;
-        $post->category = $request->category;
+        $post->category_id = $request->category_id;
         $post->body = $request->body;
 
         $post->save();
@@ -91,17 +85,11 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // validate the data
-        $this->validate($request, array( // array - validation rules
-            'title' => 'required|max:255', // введено и до максимальной длины
-            'category' => 'required|max:255',
-            'body' => 'required'
-        ));
         //save the data to the DB
         $post = Post::find($id);
 
         $post->title = $request->input('title');
-        $post->category = $request->input('category');
+        $post->category_id = $request->input('category_id');
         $post->body = $request->input('body');
 
         $post->save();
