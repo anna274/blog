@@ -393,7 +393,7 @@
     }  
 
     /*create form*/
-    .form-create{
+    .form-control{
         margin: 50px 300px 50px 350px;
         width: 45%;
         min-width: 400px;
@@ -415,3 +415,45 @@
     .form-control-button:hover{
         background-color: DarkGreen;
     }
+
+    /*time-note*/
+    .time-note{
+        width: 300px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid LightGray;
+        color: grey;
+        padding: 10px;
+
+    }
+    .time-note .note{
+        font-size: 15px;
+    }
+    .time-note .btn-field{
+        display: flex;
+        margin-top: 10px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .btn{
+        border: 2px outset LightGray;
+        color: white;
+    }
+    .edit-btn{
+        background-color: LightSeaGreen;
+    }
+    .edit-btn:hover{
+        background-color: DarkCyan;
+    }
+    .delete-btn{
+        background-color: IndianRed;
+    }
+    .delete-btn:hover{
+        background-color: Crimson;
+    }
+    .form-spacing-buttom{
+        margin-bottom: 20px;
+    }
+
+

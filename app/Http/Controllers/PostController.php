@@ -76,7 +76,10 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        //find the post in the database and save as var
+        $post = Post::find($id);
+        //return the view
+        return view('posts.edit')->withPost($post);
     }
 
     /**
@@ -88,7 +91,24 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // validate the data
+        $this->validate($request, array( // array - validation rules
+            'title' => 'required|max:255', // введено и до максимальной длины
+            'category' => 'required|max:255',
+            'body' => 'required'
+        ));
+        //save the data to the DB
+        $post = Post::find($id);
+
+        $post->title = $request->input('title');
+        $post->category = $request->input('category');
+        $post->body = $request->input('body');
+
+        $post->save();
+        //success message
+
+        //redirect to posts.show
+        return redirect()->route('posts.show', $post->id);
     }
 
     /**
