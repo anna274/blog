@@ -42,6 +42,7 @@
     <div class="btn-field">
         {!! Html::linkRoute('posts.edit','Редактировать',array($post->id), array('class'=>'btn edit-btn')) !!}
         {!! Html::linkRoute('posts.edit','Удалить',array($post->id), array('class'=>'btn delete-btn')) !!}
+
     </div>
     </div>
 </div>
