@@ -20,4 +20,12 @@ Route::get('post','BaseController@getPost');
 Route::get('recipe','BaseController@getRecipePost');
 Route::get('about', 'BaseController@getAbout'); // - переходим в PagesController в часть getAbout (имяКонтроллера@имяМетодаКонтроллера)
 
+Route::get('send', 'mailController@send');
+
 Route::resource('posts','PostController');
+/*
+Route::get('/meow', function()
+{
+    return view('hello'); // это делает контроллер
+}
+);*/

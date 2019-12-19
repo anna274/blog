@@ -15,7 +15,7 @@ class BaseController extends Controller
     public function getRecipePost(){ // it redirects to home page(Index page)
         return view('pages.recipe_post');
     }
-    
+} 
 
     // public function getAbout(){ // это не нужно для работы, но хдесь пример передачи переменных
     //     $first = "Anna";
@@ -24,7 +24,6 @@ class BaseController extends Controller
     //     $email = "anna_rusakovich.01@mail.ru";
     //     return view('pages.about')->withFullname($full)->withEmail($email); // we sent to view variable: name - fullname, value = $full
     // }
-}
 
 /* What is happening in the controller:
     1. process variable data or parametres
