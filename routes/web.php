@@ -23,9 +23,4 @@ Route::get('about', 'BaseController@getAbout'); // - переходим в Pages
 Route::get('send', 'mailController@send');
 
 Route::resource('posts','PostController');
-/*
-Route::get('/meow', function()
-{
-    return view('hello'); // это делает контроллер
-}
-);*/
+Route::get('categoty/{id}', 'CategoryController@getCategoty');
