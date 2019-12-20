@@ -15,7 +15,7 @@
 //     return view('welcome'); // 'welcome' - ссылка на ресурс
 // });
 
-Route::get('/', 'BaseController@getIndex');
+Route::get('/', 'PostController@index');
 Route::get('post','BaseController@getPost');
 Route::get('recipe','BaseController@getRecipePost');
 Route::get('about', 'BaseController@getAbout'); // - переходим в PagesController в часть getAbout (имяКонтроллера@имяМетодаКонтроллера)
@@ -23,4 +23,4 @@ Route::get('about', 'BaseController@getAbout'); // - переходим в Pages
 Route::get('send', 'mailController@send');
 
 Route::resource('posts','PostController');
-Route::get('categoty/{id}', 'CategoryController@getCategoty');
+Route::get('category/{id}', 'CategoryController@getCategoty');

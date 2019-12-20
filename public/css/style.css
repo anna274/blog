@@ -386,10 +386,11 @@
         color: green;
     }
       .article-post-preview .intro .title h1{
-        line-height: 0; 
+        /* line-height: 0;  */
         font-weight: 100;
         font-size: 40px;
-        letter-spacing: .03em; 
+        letter-spacing: .03em;
+        margin-top: 0px; 
     }  
 
     /*create form*/

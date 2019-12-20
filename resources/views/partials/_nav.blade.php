@@ -10,10 +10,10 @@
         <div class="menu">
         @foreach($objs as $obj)
                 <div class="menu-item">
-                  <a class="title" href="#">{{$obj->category_name}}</a>
+                  <a class="title" href="{{asset('category/'.$obj->id)}}">{{$obj->category_name}}</a>
                   <ul class="submenu">
                   @foreach($obj->categories()->get() as $two)
-                    <li><a href = "#">{{$two->category_name}}</a></li>
+                  <li><a href = "{{asset('category/'.$two->id)}}">{{$two->category_name}}</a></li>
                   @endforeach
                   </ul>
                 </div>

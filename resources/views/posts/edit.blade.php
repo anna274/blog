@@ -11,8 +11,11 @@
 {{ Form::label('title','Название:')}} 
 {{Form::text('title', null, ['class' => 'form-control-text'])}}
 
-{{ Form::label('category','Категория:')}}
-{{Form::text('category', null, ['class' => 'form-control-text'])}}
+{{ Form::label('category_id','Категория:')}}
+{{Form::text('category_id', null, ['class' => 'form-control-text'])}}
+
+{{ Form::label('image','URL картинки:')}}
+{{Form::text('image', null, ['class' => 'form-control-text'])}}
 
 {{Form::label('body',"Текст: ")}}     
 {{Form::textarea('body', null, ['class' => 'form-control-text'])}}

@@ -24,6 +24,9 @@
     @endforeach
     </select>
 
+    {{ Form::label('image','URL картинки:')}}
+    {{Form::text('image', null, ['class' => 'form-control-text'])}}
+
     {{ Form::label('body','Текст:')}}
     {{ Form::textarea('body',null, array('class' => 'form-control-text form-spacing-buttom'))}}
 

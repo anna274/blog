@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class BaseController extends Controller
 {
     public function getIndex(){ // it redirects to home page(Index page)
-        return view('pages.welcome');
+        return view('posts.index');
     }
     public function getPost(){ // it redirects to home page(Index page)
         return view('pages.post');

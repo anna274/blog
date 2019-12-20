@@ -14,7 +14,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        //create a var and store all posts in it
+        $posts = Post::all();
+        //return a view and pass var
+        return view('posts.index')->withPosts($posts);
     }
 
     /**
@@ -111,6 +114,6 @@ class PostController extends Controller
 
         $post->delete();
 
-        return redirect()->route('/');
+        return redirect()->route('posts.index');
     }
 }

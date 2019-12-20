@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('title', '| {{$category->categoty_name}}')
+@section('title', '| Homepage')
 
 @section('content')         
 
