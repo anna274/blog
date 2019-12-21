@@ -24,3 +24,4 @@ Route::get('send', 'mailController@send');
 
 Route::resource('posts','PostController');
 Route::get('category/{id}', 'CategoryController@getCategoty');
+Route::get('search', 'BaseController@getSearch');

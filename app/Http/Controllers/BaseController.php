@@ -15,6 +15,9 @@ class BaseController extends Controller
     public function getRecipePost(){ // it redirects to home page(Index page)
         return view('pages.recipe_post');
     }
+    public function getSearch(){
+        return view('search');
+    }
 } 
 
     // public function getAbout(){ // это не нужно для работы, но хдесь пример передачи переменных

@@ -6,11 +6,13 @@
         <link rel="stylesheet" href="{{asset('css/style.css')}}" media="all">
     </head>
     <body> <!-- background="{{url('assets/img/photo.jpg')}}"-->
-        <font face = "Helvetica">
-        @include('partials._nav')
+        <div id="wrap">
+            <font face = "Helvetica">
+            @include('partials._nav')
 
-        <div class = "main">
-            @yield('content')    
+            <div class = "main">
+                @yield('content')    
+            </div>
         </div>
             @include('partials._footer')
     </body>
