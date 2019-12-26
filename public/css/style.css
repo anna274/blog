@@ -35,7 +35,7 @@
         width: 570px;
         justify-content: left;
         margin-right: 20px;
-        margin-left: 10px;
+        margin-left: 30px;
         /* margin: auto; */
         /* margin-top: 15px; */
     }
@@ -95,7 +95,7 @@
         display: flex;
         flex-direction: row;
         height: 30px;
-        width: 120px;
+        width: 90px;
         justify-content: space-around;
     }
     .navigation .icons .icon{
@@ -178,7 +178,6 @@
     }
     .main{
         width: 100%;
-        margin-top: 20px;
     }
 
     .change-col a:hover{
@@ -393,7 +392,7 @@
     }
     .article-post-preview .intro .meta{
         width: 100%;
-        height: 20px; /*этой высоты не должно быть, но без неё title залезает в meta*/
+        height: 30px; /*этой высоты не должно быть, но без неё title залезает в meta*/
     }
     .article-post-preview .intro .meta .category{
         float: left;
@@ -481,10 +480,10 @@
 
     .search-form form {
         position: relative;
-        width: 600px;
+        width: 500px;
         margin: 0 auto;
-        margin-bottom: 40px;
-        margin-top: 50px;
+        margin-bottom: 60px;
+        margin-top: 10px;
     }
 
 .search-form input, .search-form button {
@@ -493,9 +492,10 @@
 }
 .search-form input {
   width: 100%;
-  height: 60px;
+  height: 50px;
   padding-left: 15px;
-  border: 3px solid #F9F0DA;
+  border: none;
+  border-bottom: 2px solid DarkGray;
   font-size: 20px;
 }
 .search-form button {
@@ -507,8 +507,8 @@
   margin-top: 10px;
 }
 .search-form .icon{
-    height: 42px;
-    width: 42px;
+    height: 30px;
+    width: 30px;
 }
 .search-form button:before {
   font-family: FontAwesome;
@@ -516,6 +516,12 @@
   color: #F9F0DA;
 }
 .search-form input:focus {
-  border-color: #311c24
+  border-color: #311c24;
 }
 
+#search_result{
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}

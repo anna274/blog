@@ -21,6 +21,5 @@
       </div>
       <div class="icons">
         <a href="#" title="Войти" target="_blank"><img class="icon"src="{{url('assets/img/user.png')}}" alt="Sign up"></a>
-        <a href="search" title="Поиск" target="_blank"><img class="icon" src="{{url('assets/img/search.png')}}" alt="Search"></a>
       </div>
 </div>
