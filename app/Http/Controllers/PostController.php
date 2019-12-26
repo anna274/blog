@@ -62,7 +62,8 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
-        return view('posts.show')->withPost($post);
+        $print = (isset($_GET['print']))?'print':'default';
+        return view('posts.show', compact('print', 'post'));
     }
 
     /**

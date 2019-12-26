@@ -1,6 +1,10 @@
-@extends('layouts.default')
+    
+@extends('layouts.'.$print)
 
-@section('title', '| {{$post->title}}')
+@section('title')
+    @parent
+    {{$post->title}}
+@endsection
 
 @section('content')         
 <div class="article-post">
@@ -11,7 +15,8 @@
         <div class="meta">
             <div class="category">
                 <a href="#">
-                    <strong>{{$post->category_id}}</strong>
+                    <strong>{{$post->categories->category_name}}</strong>
+                    <a href="?print=ok" title="Версия для печати" target="_blank"><img src="{{url('assets/img/print.png')}}" alt="Print version"></a>
                 </a>
             </div>
         </div>

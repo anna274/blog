@@ -6,7 +6,7 @@
 
 <div class="search-form">
 <form>
-  <input type="text" placeholder="Искать здесь...">
+  <input type="text" name="findme" placeholder="Искать здесь...">
   <button type="submit">
     <img class="icon" src="{{url('assets/img/search.png')}}" alt="Search">
   </button>
