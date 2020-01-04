@@ -49,7 +49,7 @@
     @foreach($posts as $post)
     <div class="preview">
         <a href="/posts/{{$post->id}}">
-            <img src="{{$post->image}}" width=100% height=220>  <!-- Сори, что тут height и width, я запутался в стилях -->
+            <img src="{{$post->image}}">  <!-- Сори, что тут height и width, я запутался в стилях -->
         </a>
         <a href="/posts/{{$post->id}}">
             <p>{{$post->title}}</p>
