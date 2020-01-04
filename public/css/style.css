@@ -362,14 +362,17 @@
         width: calc((100% - 80px) / 3);
         padding-bottom: 20px;
     }
-    .see-also .preview a{
+    .see-also .preview img{
+        width: calc((100% - 80px) / 3);
+        height: 220px;
         color: black;
     }
     .see-also .preview span.preview{
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        width: 100%;
+        width: calc((100% - 80px) / 3);
+        padding-bottom: 20px;
         height: 220px;
         display: block;
     }

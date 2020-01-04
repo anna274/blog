@@ -16,12 +16,11 @@
 // });
 
 Route::get('/', 'PostController@index');
-Route::get('post','BaseController@getPost');
+Route::get('post','BaseController@getPost'); // это точно надо?
 Route::get('recipe','BaseController@getRecipePost');
-Route::get('about', 'BaseController@getAbout'); // - переходим в PagesController в часть getAbout (имяКонтроллера@имяМетодаКонтроллера)
-
+Route::get('about', 'BaseController@getAbout'); // зачем?
+// - переходим в PagesController в часть getAbout (имяКонтроллера@имяМетодаКонтроллера)
 Route::get('send', 'mailController@send');
-
 Route::resource('posts','PostController');
 Route::get('category/{id}', 'CategoryController@getCategoty');
-Route::get('/search', 'SearchController@getIndex');
+Route::get('/search', 'SearchController@getIndex'); // зачем?

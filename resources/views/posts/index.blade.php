@@ -14,7 +14,6 @@
 </div>
 
 <div class="article-post-preview">
-
     @foreach ($posts as $post)
     <div class="intro">
         <a href="/posts/{{$post->id}}">

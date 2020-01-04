@@ -1,51 +1,14 @@
 <div class="see-also">
+    @foreach($posts as $post)
     <div class="preview">
-        <a href="#">
-            <span class="preview" style="background-image: url(assets/img/dessert.jpeg)"></span>
+        <a href="/posts/{{$post->id}}">
+            <span class="preview">
+                <img src="{{$post->image}}">
+            </span>
         </a>
-        <a href="#">
-            <p>Название поста</p>
+        <a href="/posts/{{$post->id}}">
+            <p>{{$post->title}}</p>
         </a>
     </div>
-    <div class="preview">
-        <a href="#">
-            <span class="preview" style="background-image: url(assets/img/dessert.jpeg)"></span>
-        </a>
-        <a href="#">
-            <p>Название поста</p>
-        </a>
-    </div>
-    <div class="preview">
-        <a href="#">
-            <span class="preview" style="background-image: url(assets/img/dessert.jpeg)"></span>
-        </a>
-        <a href="#">
-            <p>Название поста</p>
-        </a>
-    </div>
-    <div class="preview">
-        <a href="#">
-            <span class="preview" style="background-image: url(assets/img/dessert.jpeg)"></span>
-        </a>
-        <a href="#">
-            <p>Название поста</p>
-        </a>
-    </div>
-    <div class="preview">
-        <a href="#">
-            <span class="preview" style="background-image: url(assets/img/dessert.jpeg)"></span>
-        </a>
-        <a href="#">
-            <p>Название поста</p>
-        </a>
-    </div>
-    <div class="preview">
-        <a href="#">
-            <span class="preview" style="background-image: url(assets/img/dessert.jpeg)"></span>
-        </a>
-        <a href="#">
-            <p>Название поста</p>
-        </a>
-    </div> 
-
+    @endforeach
 </div>

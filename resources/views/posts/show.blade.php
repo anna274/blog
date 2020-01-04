@@ -24,26 +24,37 @@
             <h1>{{$post->title}}</h1>
         </div>
     </div>
+    
     <div class="body">
         <h3>
         {{$post->body}}
         </h3>
     </div>
-    <div class="time-note">
-    <p class="note">Опубликовано: {{ date('M j, Y',strtotime($post->created_at))}}</p>
-    <p class="note">Последнее обновление: {{ date('M j, Y',strtotime($post->updated_at))}}</p>
-    <div class="btn-field">
-        {!! Html::linkRoute('posts.edit','Редактировать',array($post->id), array('class'=>'btn edit-btn')) !!}
 
-        {!! Form::open(['route'=>['posts.destroy', $post->id], 'method' => 'DELETE']) !!}
+    <div class="time-note">
+        <p class="note">Опубликовано: {{ date('M j, Y',strtotime($post->created_at))}}</p>
+        <p class="note">Последнее обновление: {{ date('M j, Y',strtotime($post->updated_at))}}</p>
+        <div class="btn-field">
+            {!! Html::linkRoute('posts.edit','Редактировать',array($post->id), array('class'=>'btn edit-btn')) !!}
+
+            {!! Form::open(['route'=>['posts.destroy', $post->id], 'method' => 'DELETE']) !!}   
 
             {!! Form::submit('Удалить', ['class'=>'btn delete-btn']) !!}
 
-        {!! Form::close() !!}
-
-    </div>
+            {!! Form::close() !!}
+        </div>
     </div>
 </div>
-
-@include('partials._see-also')
+<div class="see-also">
+    @foreach($posts as $post)
+    <div class="preview">
+        <a href="/posts/{{$post->id}}">
+            <img src="{{$post->image}}" width=100% height=220>  <!-- Сори, что тут height и width, я запутался в стилях -->
+        </a>
+        <a href="/posts/{{$post->id}}">
+            <p>{{$post->title}}</p>
+        </a>
+    </div>
+    @endforeach
+</div>
 @endsection

@@ -60,10 +60,14 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
+    {   
         $post = Post::find($id);
+
+        // Получаем посты с таким же id, как и этот, чтобы отобразить внизу подборку
+        $posts = Post::where('category_id', $post->category_id)->get();
+        
         $print = (isset($_GET['print']))?'print':'default';
-        return view('posts.show', compact('print', 'post'));
+        return view('posts.show', compact('print', 'post', 'posts'));
     }
 
     /**

@@ -1,5 +1,4 @@
 @extends('layouts.default')
-
 @section('title', '| Post name')
 
 @section('content')         

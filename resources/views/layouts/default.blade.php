@@ -11,7 +11,6 @@
     <body> <!-- background="{{url('assets/img/photo.jpg')}}"-->
         <div id="wrap">
             @include('partials._nav')
-
             <div class = "main">
                 @yield('content')    
             </div>
