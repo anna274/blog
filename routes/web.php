@@ -22,5 +22,5 @@ Route::get('about', 'BaseController@getAbout'); // зачем?
 // - переходим в PagesController в часть getAbout (имяКонтроллера@имяМетодаКонтроллера)
 Route::get('send', 'mailController@send');
 Route::resource('posts','PostController');
-Route::get('category/{id}', 'CategoryController@getCategoty');
+Route::get('category/{id}', 'CategoryController@getCategory');
 Route::get('/search', 'SearchController@getIndex'); // зачем?
