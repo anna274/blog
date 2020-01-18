@@ -1,5 +1,4 @@
-    
-@extends('layouts.'.$print)
+@extends('layouts.'.$print) <!-- В зависимости от этого либо шаблон шоублейд дефолт) либо принт -->
 
 @section('title')
     @parent
@@ -49,7 +48,7 @@
     @foreach($posts as $post)
     <div class="preview">
         <a href="/posts/{{$post->id}}">
-            <img src="{{$post->image}}">  <!-- Сори, что тут height и width, я запутался в стилях -->
+            <img src="{{$post->image}}">  
         </a>
         <a href="/posts/{{$post->id}}">
             <p>{{$post->title}}</p>

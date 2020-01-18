@@ -21,5 +21,6 @@
       </div>
       <div class="icons">
         <a href="#" title="Войти" target="_blank"><img class="icon"src="{{url('assets/img/user.png')}}" alt="Sign up"></a>
+        <a href="<?= route('setlocale', ['lang' => 'en']) ?>" title="Switch to ENG" target="_blank"><img class="icon" src="{{url('assets/img/english.png')}}"></a>
       </div>
 </div>

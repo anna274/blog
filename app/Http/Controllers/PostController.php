@@ -15,6 +15,7 @@ class PostController extends Controller
     public function index()
     {
         //create a var and store all posts in it
+        // М Н О Ж Е С Т В Е Н Н А Я  В С Т А В К А
         $posts = Post::all();
         //return a view and pass var
         return view('posts.index')->withPosts($posts);
@@ -66,6 +67,7 @@ class PostController extends Controller
         // Получаем посты с таким же id, как и этот, чтобы отобразить внизу подборку
         $posts = Post::where('category_id', $post->category_id)->get();
         
+        // Либо принт, либо дефолт
         $print = (isset($_GET['print']))?'print':'default';
         return view('posts.show', compact('print', 'post', 'posts'));
     }
@@ -96,6 +98,7 @@ class PostController extends Controller
         //save the data to the DB
         $post = Post::find($id);
 
+        // О Д И Н О Ч Н А Я   В С Т А В К А
         $post->title = $request->input('title');
         $post->category_id = $request->input('category_id');
         $post->body = $request->input('body');
