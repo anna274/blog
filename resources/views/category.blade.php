@@ -2,11 +2,20 @@
 
 @section('title', '| {{Lang::get('en_categories.$category->categoty_name')}}')
 
-@section('content')         
+@section('content') 
+
+<div class="search-form">
+        <form action="/search">
+          <input  type="text" name="findme" placeholder="Искать здесь...">
+          <button type="submit">
+          <img class="icon" src="{{url('assets/img/search.png')}}" alt="Search">
+          </button>
+        </form>
+</div>
 
 <div class="article-post-preview">
 
-    @foreach ($posts as $post)
+    @foreach ($category->posts()->get() as $post)
     <div class="intro">
         <a href="/posts/{{$post->id}}">
         <div class="cover">
@@ -16,7 +25,7 @@
         <div class="meta">
             <div class="category">
                 <a href="/posts/{{$post->id}}">
-                    <strong>{{$post->category_id}}</strong>
+                    <strong>{{$category->category_name}}</strong>
                 </a>
             </div>
         </div>

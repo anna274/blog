@@ -19,6 +19,7 @@ Route::get('about', 'BaseController@getAbout');
 Route::get('send', 'mailController@send');
 Route::resource('posts','PostController');
 Route::get('category/{id}', 'CategoryController@getCategory');
+<<<<<<< HEAD
 Route::get('/search', 'SearchController@getIndex');
 
 // Я тут чета колдую
@@ -50,3 +51,6 @@ Route::get('setlocale/{lang}', function ($lang) {
     return redirect($url); //Перенаправляем назад на ту же страницу                            
 
 })->name('setlocale');
+=======
+Route::get('/search', 'SearchController@getIndex'); // зачем?
+>>>>>>> 5badaaf9e07fc1f55c6b11897cc3276db3ab9bde
