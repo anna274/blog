@@ -32,8 +32,7 @@ Route::get('setlocale/{lang}', function ($lang) {
 
     //Если URL (где нажали на переключение языка) содержал корректную метку языка
     if (in_array($segments[1], App\Http\Middleware\LocaleMiddleware::$languages)) {
-
-        unset($segments[1]); //удаляем метку
+        set($segments[1]); //удаляем метку
     } 
     
     //Добавляем метку языка в URL (если выбран не язык по-умолчанию)

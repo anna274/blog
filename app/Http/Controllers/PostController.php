@@ -16,7 +16,7 @@ class PostController extends Controller
     {
         //create a var and store all posts in it
         // М Н О Ж Е С Т В Е Н Н А Я  В С Т А В К А
-        $posts = Post::all();
+        $posts = Post::all()->where('lang', 'rus')->where('id', '<=', '5');
         //return a view and pass var
         return view('posts.index')->withPosts($posts);
     }
@@ -65,7 +65,7 @@ class PostController extends Controller
         $post = Post::find($id);
 
         // Получаем посты с таким же id, как и этот, чтобы отобразить внизу подборку
-        $posts = Post::where('category_id', $post->category_id)->get();
+        $posts = Post::where('category_id', $post->category_id)->where('lang', $post->lang)->get();
         
         // Либо принт, либо дефолт
         $print = (isset($_GET['print']))?'print':'default';
