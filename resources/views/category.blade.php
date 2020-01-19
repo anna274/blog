@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('title', '| {{Lang::get('en_categories.$category->categoty_name')}}')
+@section('title', '| {{$category->categoty_name}}')
 
 @section('content') 
 
